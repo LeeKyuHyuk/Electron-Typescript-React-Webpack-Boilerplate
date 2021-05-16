@@ -1,0 +1,22 @@
+{
+  "name": "electron-typescript-react-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Electron + TypeScript + React + Webpack",
+  "main": "./dist/main.bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeKyuHyuk/Electron-Typescript-React-Webpack-Boilerplate.git"
+  },
+  "keywords": [
+    "Boilerplate"
+  ],
+  "author": "KyuHyuk Lee <lee@kyuhyuk.kr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeeKyuHyuk/Electron-Typescript-React-Webpack-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/LeeKyuHyuk/Electron-Typescript-React-Webpack-Boilerplate#readme"
+}
