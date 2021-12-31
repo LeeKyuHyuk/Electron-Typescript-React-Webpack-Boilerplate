@@ -1,69 +1,78 @@
 # Electron + TypeScript + React + Webpack Boilerplate
 
-Electron + React + TypeScript + Webpack 조합으로 구성된 템플릿입니다.  
-기본적으로 Airbnb Coding Convention을 지키기 위한 ESLint와 Prettier 설정이 되어있습니다.  
-이 템플릿을 사용하여 간편하게 Electron + React + TypeScript + Webpack 조합의 프로그램을 만들 수 있으며 Windows, Linux, macOS에서 작동합니다.
+This template consists of a combination of Electron + React + TypeScript + Webpack.  
+Basically, ESLint and Prettier are set to follow the Airbnb Coding Convention.  
+You can use this template to easily create desktop applications with a combination of Electron +
+React + TypeScript + Webpack and it works on Windows, Linux, macOS.
 
-## 간단하게 시작하기
+## Getting Started
 
 ```sh
 git clone https://github.com/LeeKyuHyuk/Electron-Typescript-React-Webpack-Boilerplate.git ProjectName
 ```
 
-`package.json` 파일의 다음 필드를 생성하려는 프로젝트 정보에 맞게 수정하여 사용하시길 바랍니다.
+Please modify the following fields in the `package.json` file to match the project information you
+want to create.  
+For details on each field, please refer to the
+[npm package.json document](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
 ```json
 {
-  "name": "프로젝트 이름",
-  "version": "프로젝트 버전",
-  "description": "프로젝트 설명",
+  "name": "Project Name",
+  "version": "Project Version",
+  "description": "Project Description",
   "build": {
     "appId": "App Id",
     "productName": "Product Name",
     "buildVersion": "Build Number"
   },
-  "author": "제작자 이름 또는 단체",
-  "license": "프로젝트의 라이센스",
-  "repository": "프로젝트의 저장소 URL",
-  "keywords": ["프로젝트 키워드"],
-  "bugs": "이슈 등록 페이지 URL",
-  "homepage": "해당 프로젝트의 홈페이지 URL"
+  "author": "Author",
+  "license": "Project License",
+  "repository": "Project Repository URL",
+  "keywords": ["Project Keywords"],
+  "bugs": "Project Issue Tracker URL",
+  "homepage": "Project Homepage URL"
 }
 ```
 
-아래의 명령어로 필요한 패키지를 설치합니다.
+Install the required packages with the command below:
 
 ```sh
 cd ProjectName
 npm install
 ```
 
-아래 명령어로 개발 모드로 Electron 프로젝트를 실행합니다. 코드가 변경되면, 실시간으로 다시 빌드 되어 렌더링 됩니다.
+Run the Electron project in development mode with the command below. When code is changed, it is
+rebuilt and rendered in real time.
 
 ```sh
 npm run dev
 ```
 
-## Electron 애플리케이션 설치 파일 빌드
+## Building Application Installer
 
-`electron-builder`를 사용하여 Windows, Linux, macOS에서 작동하는 애플리케이션의 설치 파일을 빌드 할 수 있습니다.
+You can use `electron-builder` to build installer for electron application. That work on Windows,
+Linux and macOS.
 
-- **Windows :**  
+- **Windows :**
+
 ```sh
 npm run build:win
 ```
 
-- **Linux :**  
+- **Linux :**
+
 ```sh
 npm run build:linux
 ```
 
-- **macOS :**  
+- **macOS :**
+
 ```sh
 npm run build:mac
 ```
 
-## 폴더 구조
+## Structure
 
 ```
 ├── .eslintrc.yml
@@ -90,39 +99,40 @@ npm run build:mac
 └── tsconfig.json
 ```
 
-- `config` : Webpack 설정 파일들이 저장되어 있는 폴더
-- `dist` : Webpack으로 여러 파일을 하나로 합친 결과물이 저장되는 폴더
-- `out` : 빌드 된 애플리케이션 설치 파일이 저장되는 폴더
-- `public` : 전역으로 사용되는 정적 리소스 파일이 저장되는 폴더
-- `src/main` : Electron 애플리케이션에서 사용되는 Backend 모듈이 저장되는 폴더
-- `src/main/main.ts` : 'electron-main'의 진입점
-- `src/renderer` : Electron 애플리케이션에서 사용되는 Frontend 모듈(React)이 저장되는 폴더
-- `src/renderer/renderer.tsx` : 'electron-renderer'의 진입점
-- `tsconfig.json` : TypeScript 설정 파일
-- `webpack.config.js` : Webpack 설정 파일
-- `.eslintrc.yml` : ESLint 설정 파일
-- `.prettierrc.yml` : Prettier 설정 파일
+- `config` : Webpack configuration files are stored
+- `dist` : Result of merging multiple files into one by Webpack is saved
+- `out` : built application installer file is saved
+- `public` : Static resource files used globally are stored
+- `src/main` : Backend modules used in Electron applications are saved
+- `src/main/main.ts` : Entry point of 'electron-main'
+- `src/renderer` : Frontend module (React.js) used in Electron application is saved
+- `src/renderer/renderer.tsx` : Entry point for 'electron-renderer'
+- `tsconfig.json` : TypeScript configuration file
+- `webpack.config.js` : Webpack configuration file
+- `.eslintrc.yml` : ESLint configuration file
+- `.prettierrc.yml` : Prettier configuration file
 
-## 하나하나 차근차근 시작하기
+## Start step by step
 
-아래의 명령어로 프로젝트를 생성합니다.
+Create a project with the command below:
 
 ```sh
 npm init
 ```
 
-아래 명령어를 사용하여 Electron + TypeScript + React + Webpack 조합에 필요한 패키지를 설치합니다.
+Install and add the packages required for the Electron + TypeScript + React + Webpack combination
+using the command below:
 
 ```sh
 npm install --save @types/react @types/react-dom @types/react-router @types/react-router-dom react react-dom react-router react-router-dom
 npm install --save-dev concurrently copy-webpack-plugin cross-env css-loader electron electron-builder file-loader html-webpack-plugin lodash rimraf source-map-loader style-loader ts-loader ts-node typescript webpack webpack-cli webpack-dev-server
 ```
 
-Airbnb Coding Convention로 ESLint를 사용하려면, 아래 명령어로 패키지를 설치합니다.
+To use ESLint with Airbnb Coding Convention, install the package with the command below:
 
 ```sh
 npx install-peerdeps --dev eslint-config-airbnb
 npm install eslint-config-airbnb-typescript @typescript-eslint/eslint-plugin --save-dev
 ```
 
-위에 있는 '[폴더 구조](#폴더-구조)'를 참고하여 프로젝트를 구성합니다.
+Refer to the '[Structure](#Structure)' above to compose the project.

@@ -5,10 +5,11 @@ const commonConfig = require('./webpack.common.config');
 
 const rendererConfig = lodash.cloneDeep(commonConfig);
 rendererConfig.devServer = {
-  contentBase: path.join(__dirname, './dist/renderer.bundle.js'),
+  static: {
+    directory: path.join(__dirname, './dist'),
+  },
   port: 3000,
   hot: true,
-  inline: true,
 };
 rendererConfig.entry = './src/renderer/renderer.tsx';
 rendererConfig.target = 'electron-renderer';
